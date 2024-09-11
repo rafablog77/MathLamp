@@ -1,5 +1,6 @@
 Welcome to MathLamp's documentation!
 ====================================
+MathLamp's official docs are licenced by CC BY licence
 
 .. toctree::
    :maxdepth: 2
