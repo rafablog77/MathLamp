@@ -5,8 +5,12 @@ build:
   tools:
     python: "3.10"
 
+python:
+  install:
+    - requirements: docs/config/requirements.txt
+
 sphinx:
-  configuration: docs/conf.py
+  configuration: docs/config/conf.py
   fail_on_warning: true
 
 formats:
