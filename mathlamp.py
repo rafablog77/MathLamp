@@ -106,17 +106,16 @@ class MathLampInterpreter(Transformer):
             return value
         return value  # Return as is if it's already processed
 
+interpreter = MathLampInterpreter()
 if "--shell" in argv or "-s" in argv:
     print("Welcome to the MathLamp interactive shell. Press CTRL+C to close the shell")
     while True:
         code = input(">")
         tree = parser.parse(code)
-        interpreter = MathLampInterpreter()
         interpreter.transform(tree)
 else:
     filepath = argv[1]
     with open(filepath,"r") as f:
         code = f.read()
         tree = parser.parse(code)
-        interpreter = MathLampInterpreter()
         interpreter.transform(tree)
